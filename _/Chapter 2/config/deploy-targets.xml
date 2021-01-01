@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : deploy-targets.xml.xml
+    Created on : December 2, 2011, 3:52 PM
+    Author     : dvohra
+    Description:
+        Purpose of the document follows.
+-->
+
+<project>
+    <property environment="env"/>
+    <property name="as.home" value="C:/glassfish3/glassfish"/>
+    <property name="build.home" value="${basedir}/build"/>
+    <property name="build.war.home" value="${build.home}/war"/>
+    <property name="build.classes.home" value="${build.home}/classes"/>
+    <property name="domain" value="domain1"/>
+    
+    <target name="deploy">
+        <copy file="${build.war.home}/${ant.project.name}.war"
+              todir="${as.home}/domains/${domain}/autodeploy"/>
+    </target>
+    
+    
+
+   
+</project>
+
